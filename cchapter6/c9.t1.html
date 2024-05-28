@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1{
+            width: 300px;
+            height: 200px;
+            display: inline-block;
+            margin: 20px;
+        }
+        #d1{
+            background-color: yellow;
+        }
+        #d2{
+            background-color: green;
+        }
+        #d3{
+            background-color: blue;
+        }
+        
+        #d4{
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            background-color: yellow;
+            z-index: 1;
+        }
+        #d5{
+            left: 70px;
+            bottom: 40px;
+            
+            position: absolute;
+             width: 300px;
+            height: 50px;
+            background-color: hotpink;
+            z-index: 3;
+        }   
+        .c2{
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="c1" id="d1"></div>
+    <div class="c1" id="d2"></div>
+    <div class="c1" id="d3"></div>
+    
+    <div class="c2" id="d4">박스1</div>
+    <div class="c2" id="d5">박스2</div>
+    
+</body>
+</html>
