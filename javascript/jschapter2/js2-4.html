@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numlist = [12,4,15,46,38,-2,15]
+       const solution = numlist=>numlist.findIndex(v=>v<0)
+        function solution2(numlist) {
+            for(let i=0; i< numlist.length; i++) {
+                if(numlist[i] <0) {
+                    return i
+                }
+            } return -1
+        }
+        console.log(solution2(numlist))
+        
+        
+       //filter함수
+       const arr= [1,2,3,4,5,6,7,8]
+       arr.forEach(function(v,i) {
+        console.log(`${i}번째 값은${v}`)
+       })
+       console.log(arr.filter(function(v,i){
+        return true
+       }))
+       console.log(arr.filter(function(v,i){
+        return false
+       }))
+
+       array = arr.filter(function(v,i) {
+        return v %2 ===0
+       })
+       console.log(array)
+
+       //map함수 ;콜백한 함수에서 리턴한 값들을 기반으로 새로운 배열을
+       //만드는 함수이다.
+       array= arr.map(function(v,i){
+        return v%2===0
+       })
+       console.log(array)
+
+       array= arr.map(function(v,i){
+        return v + "!!"
+       })
+       console.log(array)
+       //화살표 함수;대괄호,function,return 지우기
+       //리턴문이 한문장일때 return,{} 생략가능
+       //매개변수가 하나일때만 소괄호 생략가능
+       //매개변수가 둘이상, 0개 일때는 항상 소괄호를 넣어야한다.
+
+       array= arr.map((v,i)=>v%2===0)
+       console.log(array)
+
+       nums.forEach((v,i)=>console.log(`${i}번째요소; ${v}`))
+       nums.forEach(()=> console.log(`매개변수가 없음`))
+       
+
+
+
+
+    </script>
+</body>
+</html>

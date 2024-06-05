@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //옛날 코드
+    
+        const isYear = function(연도= new Date().getFullYear()) {
+            if(typeof(연도)==='undefined') {
+                연도 = new Date().getFullYear()
+            }
+            연도 = typeof(연도)==='undefined' ? new Date().getFullYear() : 연도
+            연도 = typeof(연도)!=='undefined' ? 연도 : new Date().getFullYear()
+            연도 = 연도 || new Date().getFullYear()
+
+        }
+    </script>
+</body>
+</html>
