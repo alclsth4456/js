@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체
+        const dog = {
+            name : '모리',
+            age : 10,
+            bark : function() {
+                console.log(`${dog.name} 이/가 짖습니다.`)
+            },
+            sleep : ()=>{
+                console.log(`${dog.name} 이/가 잡니다`)
+            }
+        }
+        dog.bark()
+        dog.sleep()
+
+        //객체의 키와 값 추가하기
+        dog.color = 'white'
+        console.log(dog)
+        //제거하기 delete
+        delete dog.color
+        console.log(dog)
+        const js = {
+            name : '혼자 공부하는 파이썬',
+            price : 18000,
+            publisher : '한빛'
+        }
+        
+    </script>
+</body>
+</html>
