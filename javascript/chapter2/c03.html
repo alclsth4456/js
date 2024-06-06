@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체 name - 키, sojin - 값
+        const person = {
+            name: "Sojin"
+        }
+
+        //안에 함수도 들어갈 수 있다
+        const person2 = {
+            name: {
+                firstName:"so",
+                lastName: "jin"
+            },
+            age: 32,
+            isAdult:true,
+            printInfo:function() {
+                console.log('printInfo')
+            }
+        }
+        console.log(person2["age"])
+        console.log(person2["name"]["firstName"])
+
+        const person3 = {
+            name: {
+                firstName:"so",
+                lastName:"jin"
+            },
+            likes:["apple","samsung"],
+            printHello:function() {
+                return "Hello"
+            }
+        }
+        console.log(person3["likes"][0])
+        console.log(person3["likes"][1])
+
+        console.log(person3["printHello"])  //[function:printHello]
+        console.log(person3["printHello"]())  //함수를 호출할 때, Hello
+
+        //마침표 연산자
+        console.log(person3.name.firstName)
+        console.log(person3.likes[1])
+        console.log(person3.printHello())
+
+
+        //const 키워드로 선언한 상수 변수에 할당한 객체에 속성을 
+        //추가하거나 삭제할 수 있다. 이는 객체 자료형의 특성인 참조때문에 그렇다.
+        delete person.name;
+        console.log(person)  //{}
+        
+
+    </script>
+</body>
+</html>

@@ -5,13 +5,13 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.*;
 
-class Student {
+class Student1 {
 String name;
 int ban;
 int no;
 int kor,eng,math;
 
-public Student(String name, int ban, int no, int kor, int eng, int math) {
+public Student1(String name, int ban, int no, int kor, int eng, int math) {
 	super();
 	this.name = name;
 	this.ban = ban;
@@ -37,9 +37,9 @@ public String toString() {
 }
 class BanNoAscending implements Comparator {
 	public int compare(Object o1, Object o2) {
-		if(o1 instanceof Student && o2 instanceof Student) {
-			Student s1 = (Student)o1;
-			Student s2 = (Student)o2;
+		if(o1 instanceof Student1 && o2 instanceof Student1) {
+			Student1 s1 = (Student1)o1;
+			Student1 s2 = (Student1)o2;
 			if(s1.ban>s2.ban) {
 				return 1;
 			}else if(s1.ban==s2.ban){
@@ -57,11 +57,11 @@ public class Ex11_4 {
 	public static void main(String[] args) {
 
 		ArrayList list = new ArrayList();
-		list.add(new Student("홍길동",1,1,100,100,100));
-		list.add(new Student("남궁성",1,2,90,80,70));
-		list.add(new Student("김자바",1,3,80,80,90));
-		list.add(new Student("이자바",1,4,70,90,70));
-		list.add(new Student("안자바",1,5,60,100,80));
+		list.add(new Student1("홍길동",1,1,100,100,100));
+		list.add(new Student1("남궁성",1,2,90,80,70));
+		list.add(new Student1("김자바",1,3,80,80,90));
+		list.add(new Student1("이자바",1,4,70,90,70));
+		list.add(new Student1("안자바",1,5,60,100,80));
 		
 		Collections.sort(list, new BanNoAscending());
 		Iterator it = list.iterator();

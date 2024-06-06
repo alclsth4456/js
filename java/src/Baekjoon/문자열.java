@@ -120,4 +120,4 @@ public class 문자열 {
 			sc.close();
 		}
 	}
-}
+

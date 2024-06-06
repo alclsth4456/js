@@ -2,6 +2,7 @@ package Stream;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class UserTest {
 
@@ -27,6 +28,7 @@ public class UserTest {
 		list.stream().filter(u-> u.getLevel()>=15)
 					.map(u-> u.getName()).sorted()
 					.forEach(u-> System.out.println(u));
-	}
+		
+			}
 
 }

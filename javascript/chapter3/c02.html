@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button data-cnt="10">가방구매</button>
+    <button data-cnt="0">신발구매</button>
+    <a href="https://www.google.com">google</a>
+    <script>
+        //data-*사용자가 원하는 속성을 추가할 수 있게 한 사용자 정의속성
+        //dataset속성을 사용해 조작할 수 있다.
+        const button1 = document.querySelectorAll("button")
+        button1.forEach((e) => {
+            console.log(e.dataset)
+        });
+        //속성의 값만 가져오기
+        button1.forEach((e)=>{
+            console.log(e.dataset.cnt)
+        }
+    )
+
+        //속성의 값 변경
+        button1.forEach((e)=>{
+            e.dataset.cnt = 50;
+        })
+        button1.forEach((e) => {
+            console.log(e.dataset)  //50 50으로 변경
+        });
+
+        //속성 조작하기
+        /*getAttribute("속성명")
+          setAttribute("속성명","속성값")
+           removeAttribute("속성명")*/
+        const ag = document.querySelector("a")
+        const hg = ag.getAttribute("href")
+        // console.log(hg)
+        ag.setAttribute("hg","https://google.com")
+        ag.innerText = "구글"
+        ag.setAttribute("target","_blank")
+        
+        //요소 노드의 속성을 제거
+        ag.removeAttribute("class")
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

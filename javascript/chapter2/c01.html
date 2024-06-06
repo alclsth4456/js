@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       /* 함수의 매개변수느 함수 호출 시 전달되는 데이터가 기본으로 할당되지만
+        함수를 호출할 때 데이터를 전달하지 않는다고해서 오류가 발생하진 않는다,,
+        변수를 선언하고 값을 할당하지 않으면  undefined값으로 초기화 되는 것처럼
+        매개변수도 데이터를 전달하지 않으면 undefined 값이 할당된다.
+        */
+
+        const sum = (num1,num2) => {
+            console.log(num1,num2);
+        }
+        sum(10,20);
+
+        //매개변수를 정의하고 직접 데이터를 할당하는 방식- 최신 버전
+        // function sum(a=10, b=20) {
+        //     console.log(a,b);
+        // }
+        // sum();
+
+        //내부에서 result변수를 참조해 값을 출력
+        function sum2(num1, num2) {
+            let result = num1+num2;
+            console.log("inner: "+result);
+        }
+        sum2(10,20);
+
+        /*sum함수의 내부 변수인 result가 return 문에 작성,함수 내부 변수인 resul에
+        할당된 값, 즉 데이터가 sum함수를 호출한 곳으로 반환한다.
+        */
+    //    function sum3(num1, num2) {
+    //     let result=num1 + num2;
+    //     return result;
+    //    }
+    //    result = sum3(20,20);
+    //    console.log("out: " + result);
+
+    //
+    //    function sum3(num1, num2) {
+    //     return num1 + num2;
+    //    }
+    //    result = sum3(20,20);
+    //    console.log("out: " + result);
+    function getArrayMaxNumber(arr) {
+        let result=arr[0];
+        for(let i=0; i<arr.length; i++) {
+        if(result <arr[i])  result=arr[i];
+            
+    }
+    return result;
+    }
+    const max = getArrayMaxNumber([10,50,30]);
+    console.log(max);
+      
+    //return문인 외부 함수에서 내부함수의 변수를 참조하게되면 오류가 발생
+    /*스코프는 변수나 함수와 같은 참조 대상 식별자를 찾아내기 위한규칙이다.
+    */
+
+    
+    let a = 10;  //전역 스코프
+    function sum3() {
+        console.log(`함수 내부: ${a}`);
+    }
+    sum3();
+    console.log(`함수 내부: ${a}`);
+
+    function sum4() {
+        let a1 = 20  //지역 스코프
+        console.log(`함수 내부: ${a1}`)
+    }
+    sum4();
+    //오류, 내부에서 변수 선언시 외부 참조 불가
+    // console.log(`함수 내부: ${a1}`)  
+
+    //함수 호이스팅, 코드를 선언과 할당으로 분리해 선언부를 자신의 스코프 
+    //최상위로 끌어올리는 것을 말한다.
+    var n;  //선언부를 프코프 최상위로 끌어올림
+    console.log(n);  //undefined 출력
+    n=10;
+
+    //함수도 동일, 호이스팅되어서 값(Hello)이 출력
+    printHello();
+    function printHello() {
+        console.log("Hello");
+    }
+
+    //함수 표현식은 함수 선언문과 다르게 작동함(에러발생)
+    printHello2();
+    var printHello2=function printHello() {
+        console.log("Hello");
+    }
+
+    
+
+    </script>
+    
+</body>
+</html>
