@@ -4,42 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-
-    </style>
 </head>
 <body>
-    
-    <div id="i1"></div>
-    <div id="i2"></div>
-    <div id="i3"></div>
-    <div id="i4"></div>    
-    
+    <h1>건강에 좋은 건강 식품</h1>
+    <div id="i1">블루베리</div>
+    <div id="i2">귀리</div>
+    <div id="i3">토마토</div>
+    <div id="i4">시금치</div>
+    <div id="i5">적포도주</div>
+    <div id="i6">견과류</div>
+    <div id="i7">브로콜리</div>
+    <div id="i8">연어</div>
+    <div id="i9">브로콜리</div>
+    <div id="i10">녹차</div>
     <script>
-    const home = document.querySelector("#i1")
-    const html5 = document.querySelector("#i2")
-    const css3 = document.querySelector("#i3")
-    const jquery = document.querySelector("#i4")
-
-    home.textContent = "home"
-    home.style.borderTopLeftRadius = "20px"
-    home.style.borderBottomLeftRadius = "20px"
-
-    html5.textContent = "html5"
-    css3.textContent = "css3"
-    jquery.textContent = "jquery"
-    jquery.style.borderTopRightRadius = "20px"
-    jquery.style.borderBottomRightRadius = "20px"
-
-    const divs = document.querySelectorAll("div")
-    divs.forEach((div)=>{
-        div.style.border = "1px solid black"
-        div.style.width = "60px"
-        div.style.height = "30px"
-        div.style.float = "left"
-        div.style.textAlign = "center"
-        div.style.padding = "20px"
-    })
-    </script>   
+        const divs = document.querySelectorAll("div")
+        divs.forEach((div,i) => {
+            div.style.border = "1px solid black"
+            div.style.width = "200px"
+            div.style.height = "30px"
+            div.style.textAlign = "center"
+            div.style.padding = "10px"
+            if(i%2===0) {
+                div.style.backgroundColor = "lightgray"
+            }
+        });
+    </script>
 </body>
 </html>

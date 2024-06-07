@@ -6,29 +6,42 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>건강에 좋은 건강 식품</h1>
-    <div id="i1">블루베리</div>
-    <div id="i2">귀리</div>
-    <div id="i3">토마토</div>
-    <div id="i4">시금치</div>
-    <div id="i5">적포도주</div>
-    <div id="i6">견과류</div>
-    <div id="i7">브로콜리</div>
-    <div id="i8">연어</div>
-    <div id="i9">브로콜리</div>
-    <div id="i10">녹차</div>
+    <h1>예약 방법 및 요금</h1>
+    <div>
+        <ul class="c1">
+            <li id="i1"></li>
+            <li id="i2"></li>
+        </ul>
+        <ul class="c1">
+            <li id="i3"></li>
+            <li id="i4"></li>
+            <li id="i5"></li>
+            <li id="i6"></li>
+        </ul>
+    </div>
     <script>
-        const divs = document.querySelectorAll("div")
-        divs.forEach((div,i) => {
-            div.style.border = "1px solid black"
-            div.style.width = "200px"
-            div.style.height = "30px"
-            div.style.textAlign = "center"
-            div.style.padding = "10px"
-            if(i%2===0) {
-                div.style.backgroundColor = "lightgray"
-            }
-        });
+       document.addEventListener("DOMContentLoaded",()=>{
+           const cE1 = document.querySelectorAll("li")
+           cE1.forEach((li) => {
+
+               li.style.color = "blue"
+       })
+
+        const i1 = document.querySelector("#i1")
+        i1.textContent = "직접 통화"
+        const i2 = document.querySelector("#i2")
+        i2.textContent = "문자 남기기"
+        const i3 = document.querySelector("#i3")
+        i3.textContent = "1인:40000원"
+        const i4 = document.querySelector("#i4")
+        i4.textContent = "2인:60000원"
+        const i5 = document.querySelector("#i5")
+        i5.textContent = "3인:80000원"
+        const i6 = document.querySelector("#i6")
+        i6.textContent = "5인:100000원"
+});
+
+
     </script>
 </body>
 </html>
