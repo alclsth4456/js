@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- React와 ReactDOM 라이브러리(개발 버전) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <script>
+        const items1 = ["가지","간장","설탕","식초","다진마늘","버터"]
+        const menu1 = React.createElement(
+            "ul",
+            {className:"menu1"},
+            items1.map((menu1,i)=>React.createElement("li",{key:i},menu1))
+        )
+        
+        const items2=["돼지고기 앞다리살","배추김치","대파","청양고추","물","된장","들기름","설탕","다진마늘","후추"]
+        const menu2 = React.createElement(
+            "ul",
+            {className:"menu2"},
+            items2.map((menu2,i)=>React.createElement("li",{key:i},menu2))
+
+        )
+        ReactDOM.render([menu1,menu2],document.querySelector("#root"))
+    </script>
+</body>
+</html>
