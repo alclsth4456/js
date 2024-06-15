@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //a~b까지 숫자를 모두 곱하는 함수
+        const multiplyAll = function(a,b) {
+            let c= 1;
+            for(let i=a; i<=b; i++) {
+                c*=i
+            }
+            return c
+        }
+            console.log(multiplyAll(1,2))
+            console.log(multiplyAll(1,3))
+            
+            function min(arr) {
+                let put = arr[0]
+                for (const it of arr) {
+                    if(put > it) {
+                        put = it
+                    }
+                }
+                return put
+            }
+            console.log(min([1,2,3,4]))
+            // const max = function(arr){
+            //     let output = arr[0]
+            //     for (const 값 of arr) {
+            //         if(output< 값) {
+            //             output= 값
+            //         }
+            //     }
+            //     return output
+
+            // }
+            //console.log(max([1,2,3,4]));
+
+            //
+            // const max = function(...arr){
+            //     let output = arr[0]
+            //     for (const 값 of arr) {
+            //         if(output< 값) {
+            //             output= 값
+            //         }
+            //     }
+            //     return output
+
+            // }
+            // console.log(max(1,2,3,4));
+            
+            //[1,2,3,4]와 (1,2,3,4) 형태를 모두 받는 max()함수
+            const max = function(start, ...end) {
+                if(Array.isArray(start)) {  //배열이 배열이면 true 아니면 false
+                    let output = start[0]
+                 for (const 값 of start) {
+                     if(output< 값) {
+                         output= 값
+                     }
+                    }
+                    return output
+                }else{
+                    let output = start
+                 for (const 값 of end) {
+                     if(output< 값) {
+                         output= 값
+                         45
+                     }
+
+                }
+                return output
+            }
+        }
+        console.log(max([1,2,3,4]))
+        console.log(max(1,2,3,4))
+
+        //a~b까지 더하는 함수
+        function sumAll(a,b) {
+            let sum=0;
+            for(let i=a; i<=b; i++) {
+                sum+=i;
+            }
+            return sum
+        }
+        console.log(`1부터 100까지 합: ${sumAll(1,100)}`)
+      console.log('------------------------------------------------')
+      //매개변수 수에 맞게 호출안해도 에러발생 하지않음
+      const func1 = function(a) {
+        console.log('함수가 호출')
+        console.log('a',a)
+      }
+      func1(1,2,3,4)
+      
+      const func2 = function(a,b) {
+        console.log("a",a)
+        console.log(b)
+      }
+      func2(1)
+      console.log('----------------------------------------------')
+      const func3 = function(a,b) {
+        if(b!==undefined) {
+            console.log('a',a)
+            console.log('b',b)
+        }else if(a!==undefined) {
+            console.log('a',a)
+        }else{
+            console.log('empty')
+        }
+      }
+      func3()
+      func3(1)
+      func3(1,2)
+    
+
+
+
+
+
+
+    </script>
+</body>
+</html>
