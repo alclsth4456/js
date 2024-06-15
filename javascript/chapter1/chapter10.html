@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// const f = function() {
+// console.log('안녕하세요')
+// console.log('안녕하세요')
+// console.log('안녕하세요')
+// }
+// f()
+
+// const a = function(x) {
+//     return x + 5
+// }
+// console.log(a(1))
+// console.log(a(2))
+
+const sum = function(limit) {
+    let add = 0
+    for(let i=1; i <= limit; i++) {
+        add +=i
+    }
+    console.log(add)
+    }
+
+    sum(10)
+    sum(20)
+    sum(30)
+//윤년 구하기
+//4로 나누어 떨어지는 해는 윤년
+//100으로 나누어떨어지면 윤년이 아니다
+//400으로 나누어 떨어지는 해는 윤년
+const isYear = function(year) {
+return (year % 4===0) && (year%100!==0)||(year%400===0)
+}
+console.log(`2024년은 윤년? ${isYear(2024)}`)
+
+const min = function(arr) {
+    let output = arr[0]
+    for (const values of arr) {
+    if(output > values) {
+        output = values
+    }    
+    }
+    return output
+}
+console.log(min([52,273,32,275,24,57]))
+
+
+    </script>
+</body>
+</html>

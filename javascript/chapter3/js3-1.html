@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-color{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">title</h1>
+    <p class="text">text-1</p>
+    <p class="text">text-2</p>
+    <p id="text1">text1</p>
+    <p id="text2">text2</p>
+    <p id="text3">text3</p>
+    <script>
+        
+        //  const e1 = document.getElementById("title")
+        //  console.log(e1)
+        //  const classE1 = document.getElementsByClassName("text")
+        //  console.log(classE1)
+        //  const tagEls = document.getElementsByTagName("p")
+        //  console.log(tagEls)
+        // console.log(tagEls[0])
+        // console.log(tagEls[1])
+
+        //css 선택자 메서드 - query 메서드
+        const pE1 = document.querySelector("#text1")
+        pE1.style.color="red"
+        pE1.style.backgroundColor="black";
+        pE1.style.fontSize="20px";
+
+        //class 속성 add(), remove(), toggle()으로 사용
+        //style 속성으로 스타일 조작하기엔 불편
+        const pE = document.querySelector("#text2")
+        pE.classList.add("red-color");
+
+        const pE3 = document.querySelector("#text3")
+        setInterval (function() {
+            pE3.classList.toggle("red-color");
+        }, 2000);
+
+                
+
+
+    </script>
+
+</body>
+</html>

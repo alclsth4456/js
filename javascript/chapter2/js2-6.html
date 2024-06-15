@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //타이머 함수
+        // setTimeout(function() {
+        //     console.log('set!set')
+        // }, 1000)
+        // setInterval(() => {
+        //     console.log('interval')
+        // }, 1000);
+
+        //타이머 제거 함수;리턴되는 함수이므로 변수 만들어야 함
+        // const a = setTimeout(function() {
+        //     console.log('set!set')
+        // }, 1000)
+        // const b = setInterval(() => {
+        //     console.log('interval')
+        // }, 1000);
+        //console.log(a,b)
+
+      //  clearTimeout(a)
+      //  clearInterval(b)
+        function sample(...it) {
+            console.log(it)
+        }
+        sample(1,2)
+        sample(1,2,3,4)
+        sample(1,234,67,87,345,768,89)
+        console.log('------------------')
+        function sample(a,b,...c) {
+            console.log(a,b,c)
+        }
+
+        sample(1,2,3)
+        sample(1,2,3,4)
+
+        const arr = [1,2,3,4,5]
+        console.log(...arr) 
+        function s1(...item) {
+            console.log(item)
+        }
+        s1(...arr)
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <h2></h2>
+    <textarea></textarea>
+    <script>
+        /*남은 글자수 출력
+        keydown - 키가 눌릴때 실행, 누르고 있을때나 입력 될때 실행
+        keyup - 키가 떨어질때 실행
+        keypress - 입력되었을 때 실행
+        */
+        const area = document.querySelector("textarea")
+        const h1 = document.querySelector("h1")
+
+        area.addEventListener("keyup",()=> {
+            const length = area.value.length
+            h1.textContent=`글자 수: ${length}`
+        })
+
+        const h2 = document.querySelector("h2")
+        document.addEventListener("keydown",(event)=>{
+            let output = ""
+            output+=`alt:${event.altKey}<br>`
+            output+=`ctrl:${event.ctrlKey}<br>`
+            output+=`shift:${event.shiftKey}<br>`
+            output+=`code:${event.code}<br>`  //입력한 키를 나타냄
+            output+=`keyCode:${event.keyCode}`
+            h2.innerHTML=output
+                })
+        //이벤트 발생시킨 객체에 접근
+        //event.currentTarget - 화살표 함수, 익명함수 모두 가능
+        //this키워드 사용- 익명함수에만 가능
+        // const listener=function(event){
+        //     console.log(this)
+        //     // const length=event.currentTarget.value.length
+        //     const length=this.value.length
+        //     // h1.textContent=`글자 수:${length}`
+        // }
+        // document.addEventListener("DOMContentLoaded",()=>{
+        //     const textarea=document.querySelector("textarea")
+        //     const h1=document.querySelector("h1")
+        //     textarea.addEventListener("keyup",listener
+        //     )
+        // })
+
+    </script>
+</body>
+</html>
