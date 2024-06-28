@@ -1,0 +1,25 @@
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .slider-button {
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .image-list {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+  
+  .slider-image {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+  }
