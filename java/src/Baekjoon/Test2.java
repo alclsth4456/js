@@ -80,12 +80,17 @@ public class Test2 {
 		System.out.println("요리시간");
 		int c = sc.nextInt();
 		
-		int min = a*60+b;
-		min += c ;
-		
-		int hour = ()
+		int min = a*60+b+c;
+		int hour = (min/60) % 24;
+		int minute = min%60;
+		System.out.println(hour +" " + minute);
 	}
 			
+
+		
+		
+		
+	}
 
 	
 	
