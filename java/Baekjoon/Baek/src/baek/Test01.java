@@ -1,7 +1,10 @@
-package bj;
+package baek;
 
-public class test1 {
-public static void main(String[] args) {
+import java.util.Scanner;
+
+public class Test01 {
+
+	public static void main(String[] args) {
 		
 		System.out.println("Hello Word!");
 		
@@ -63,5 +66,7 @@ public static void main(String[] args) {
 		
 		sc.close();
 				
-}
+		
 	}
+
+}
