@@ -1,0 +1,42 @@
+package baek;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.NoSuchElementException;
+import java.util.StringTokenizer;
+
+public class test4 {
+
+	public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        try {
+            int t = Integer.parseInt(br.readLine().trim());
+            
+            for (int i = 1; i <= t; i++) {
+                String line = br.readLine();
+                if (line == null || line.trim().isEmpty()) {
+                    throw new NoSuchElementException("Input line is empty or null");
+                }
+                
+                StringTokenizer st = new StringTokenizer(line);
+                if (st.countTokens() < 2) {
+                    throw new NoSuchElementException("Not enough tokens in input");
+                }
+                
+                int a = Integer.parseInt(st.nextToken());
+                int b = Integer.parseInt(st.nextToken());
+                int sum = a + b;
+                System.out.println("Case #" + i + ": " + sum);
+            }
+        } catch (IOException e) {
+            System.out.println("IOException occurred: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number format: " + e.getMessage());
+        } catch (NoSuchElementException e) {
+            System.out.println("NoSuchElementException: " + e.getMessage());
+        }
+	}
+
+}

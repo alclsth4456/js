@@ -1,0 +1,2 @@
+module baejoon {
+}

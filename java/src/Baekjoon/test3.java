@@ -74,6 +74,7 @@ public class test3 {
 //		System.out.println(str+" int");
 //	}
 	
+<<<<<<<< HEAD:java/src/Baekjoon/test3.java
 //	int n = Integer.parseInt(br.readLine());
 //	int bByte = n/4;
 //	sb.append("long");
@@ -92,6 +93,10 @@ public class test3 {
 		bw.write(a+b);
 		bw.flush();
 		
+========
+	for(int i= 0; i < n; i++) {
+		System.out.println(sb);
+>>>>>>>> 8db44b29844a485bbf986edd0608178b8bc56eb7:java/src/Baekjoon/.metadata/.plugins/org.eclipse.core.resources/.history/10/b0953e2ba13b001f1138bdfce235db7b
 	}
 	}
 
