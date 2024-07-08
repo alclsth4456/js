@@ -1,0 +1,35 @@
+package Baekjoon;
+
+import java.util.Scanner;
+
+public class test3 {
+
+	public static void main(String[] args) {
+
+	Scanner sc = new Scanner(System.in);
+	
+		//2739
+//	int n = sc.nextInt();
+//	for(int i =1; i<=9; i++) {
+//		System.out.println(n+ "x" + i+"="+(n*i));
+//	}
+
+	
+	//10950
+//	int t = sc.nextInt();
+//	for(int i = 0; i< t; i++) {
+//		int a = sc.nextInt();
+//		int b = sc.nextInt();
+//		System.out.println(a + b);
+//	}
+	
+	//8393
+	int n = sc.nextInt();
+	int sum= 0;
+	for(int i = 1; i <= n; i++) {
+		sum += i; 
+	}
+	System.out.println(sum);
+	}
+
+}
