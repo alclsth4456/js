@@ -91,7 +91,7 @@ insert into user4 (`uid`,`name`,`gender`,`age`,`addr`) values('A107','허난설�
 select*from user4;
 drop table user4;
 
-
+#실습 3-9
 create table user5 (
 `seq` int primary key auto_increment,
 `name` varchar(10) not null,
@@ -100,6 +100,9 @@ create table user5 (
 `addr` varchar(20)
 );
 select*from user5;
+
+#실습 3-10
+
 insert into user5 values(NULL,'김유신','M',25,'경남 김해시');
 insert into user5 values(NULL,'김춘추','M',25,'경남 경주시');
 insert into user5 values(NULL,'장보고','M',25,'전남 완도시');
