@@ -1,13 +1,20 @@
 package baek;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class teast5 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		Scanner sc = new Scanner(System.in);
 		StringBuilder sb = new StringBuilder();
+		
+//		StringTokenizer st = new StringTokenizer(br.nextToken());
 		
 //		String str = sc.nextLine();
 //		int n = sc.nextInt();
@@ -92,10 +99,78 @@ public class teast5 {
 //		}
 		
 		//1152 
+//		String str = sc.nextLine();
+//		StringTokenizer st = new StringTokenizer(str," ");
+//		System.out.println(st.countTokens());
+//	
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+//		System.out.println(st.countTokens());
 		
+		//2908
+//		int num1 = sc.nextInt();
+//		int num2 = sc.nextInt();
+//		
+//		num1 = Integer.parseInt(new StringBuilder().append(num1).reverse().toString());
+//		num2 = Integer.parseInt(new StringBuilder().append(num2).reverse().toString());
+//		
+//		System.out.print(num1 > num2 ? num1:num2);
 		
+		//5622
+//		String str = sc.nextLine();
+//		int num = str.length();
+//		int cnt = 0;
+////		char ch = str.charAt(0);
+//		for(int i = 0; i < num; i++) {
+//			switch(str.charAt(i)) {
+//			case 'A': case 'B': case'C':
+//			cnt +=3;
+//			break;
+//			
+//			case 'D' : case 'E': case 'F':
+//				cnt += 4;
+//				break;
+//				
+//			case 'G': case 'H': case 'I':
+//				cnt+=5;
+//				break;
+//			
+//			case 'J': case 'K': case 'L':
+//				cnt+=6;
+//				break;
+//			
+//			case 'M': case 'N': case 'O':
+//				cnt+=7;
+//				break;
+//			
+//			case 'P': case 'Q': case 'R': case 'S':
+//				cnt+=8;
+//				break;
+//			
+//			case 'T': case 'U': case 'V':
+//				cnt+=9;
+//				break;
+//			
+//			case 'W': case 'X': case 'Y': case 'Z':
+//				cnt+=10;
+//				break;
+//				
+//			}	
+//		}
+//		System.out.println(cnt);
+		
+		//11718
+		//nextLine: 엔터치기 전까지 입력값을 받음
+		//hasNextLine: 형태가 boolean으로 참, 거짓을 판단 입력이 있는지 여부를 판단하여
+		//입력값이 있으면 true, 없으면 false를 반환
+			while(sc.hasNextLine()) {
+				String str = sc.nextLine();
+				System.out.println(str);
+			}
+			sc.close();
+
 		}
-		
+	
 	
 
 }
