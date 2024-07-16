@@ -2,7 +2,7 @@ package baek;
 
 import java.util.Scanner;
 
-public class Test2 {
+public class test2 {
 
 	public static void main(String[] args) {
 
