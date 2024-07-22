@@ -1,6 +1,6 @@
 package test4;
 
-import sub3.Apple;
+import test4.Apple;
 
 public class test5 {
 

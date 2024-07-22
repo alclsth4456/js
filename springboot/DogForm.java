@@ -52,7 +52,7 @@ public class DogForm {
     @ElementCollection
     @CollectionTable(name = "dog_images", joinColumns = @JoinColumn(name = "dog_id"))
     @Column(name = "image_url")
-    private List<String> images;
+    private List<String> images;  //나중에 다시 수정해야될 것
 
 //    @Temporal(TemporalType.TIMESTAMP)
 //    private Date createTime;
