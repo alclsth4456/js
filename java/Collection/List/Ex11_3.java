@@ -9,7 +9,7 @@ class Student implements Comparable<Student> {
 	int kor,eng,math;
 	
 	public Student(String name, int ban, int no, int kor, int eng, int math) {
-		super();
+		
 		this.name = name;
 		this.ban = ban;
 		this.no = no;

@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 import javax.xml.ws.handler.MessageContext.Scope;
 
-public class Student2 {
+public class Student {
 	
 	
 	private 	String name;
@@ -18,7 +18,7 @@ public class Student2 {
 	private 	int avg;
 	
 	
-	public Student2(String name, int kor, int eng, int math) {
+	public Student(String name, int kor, int eng, int math) {
 		super();
 		this.name = name;
 		this.kor = kor;
@@ -61,17 +61,17 @@ public class Student2 {
 	
 	public static void main(String[] args) {
 		  Scanner sc = new Scanner(System.in);
-	        List<Student2> list = new ArrayList<>();
+	        List<Student> list = new ArrayList<>();
 
 	//        print(list);
 
 	        // 총점
-//	        int total = list.stream().mapToInt(Student2::getTotal).sum();
+//	        int total = list.stream().mapToInt(Student::getTotal).sum();
 
 //	        Score(sc, list);
 //	    }
 
-	//    public static void Score(Scanner sc, List<Student2> list) {
+	//    public static void Score(Scanner sc, List<Student> list) {
 	    	while (true) {
 	        System.out.println("성적관리 프로그램" + "\n" + "1.성적입력 2.성적출력 3.성적수정 4.성적삭제 5.종료");
 	        int choice = sc.nextInt();
@@ -98,7 +98,7 @@ public class Student2 {
 	        }
 	    }
 
-	    static void insert(Scanner sc, List<Student2> list) {
+	    static void insert(Scanner sc, List<Student> list) {
 	        System.out.println("이름");
 	        String name = sc.next();
 	        System.out.println("국어");
@@ -107,24 +107,24 @@ public class Student2 {
 	        int eng = sc.nextInt();
 	        System.out.println("수학");
 	        int math = sc.nextInt();
-	        list.add(new Student2(name, kor, eng, math));
+	        list.add(new Student(name, kor, eng, math));
 	      
 	    }
 
-	    static void print(List<Student2> list) {
+	    static void print(List<Student> list) {
 	        for (Student2 student : list) {
 	            System.out.println(student);
 	        }
 	    }
 
-	    static void modify(Scanner sc, List<Student2> list) {
+	    static void modify(Scanner sc, List<Student> list) {
 	    	System.out.println("수정할 학생의 이름");
 	    	String name = sc.nextLine();
 	    	
 	    
 	    }
 
-	    static void delete(Scanner sc, List<Student2> list) {
+	    static void delete(Scanner sc, List<Student> list) {
 	        // 삭제 로직 작성
 		
 		
