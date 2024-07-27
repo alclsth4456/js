@@ -29,7 +29,7 @@ public class ArticleController {
         return "articles/new";
     }
 
-    @PostMapping("/articles/create")  //url을 post방식으로 전송했으므로 postmapping으로 컨트롤러에서 받기
+    @PostMapping("/articles/create")
     public String createArticle(ArticleForm form) {
 //        System.out.println(form.toString());
         log.info(form.toString());
@@ -39,7 +39,7 @@ public class ArticleController {
         //2.레파지토리로 엔티티를 DB에 저장
         Article saved = articleRepository.save(article);
         log.info(saved.toString());
-        return "redirect:/articles/"+saved.getId;
+        return "redirect:/articles/"+saved.getId();
     }
 ;
     @GetMapping("/articles/{id}")
@@ -48,8 +48,10 @@ public class ArticleController {
         //1.id를 조회해 데이터 가져오기
         Article articleEntity = articleRepository.findById(id).orElse(null);
 //        Optional<Article> article = articleRepository.findById(id).orElse(null);
+
         //2.모델에 데이터 등록하기
         model.addAttribute("article", articleEntity);
+
         //3.뷰 페이지 반환하기
         return "articles/show";
     }
@@ -58,13 +60,11 @@ public class ArticleController {
     public String index(Model model) {
         //1.모든 데이터 가져오기
         ArrayList<Article> articleEntityList = (ArrayList<Article>) articleRepository.findAll();
-//        List<Article> articleEntityList = (List<Article>) articleRepository.findAll();
-        //2.모델에 데이터 등록하기(모델을 통해 매개변수를 받아온다.)
 
+        //2.모델에 데이터 등록하기
         model.addAttribute("articleList", articleEntityList);
-        //3.뷰 페이지 설정하기(웹 페이지를 하나의 틀로 만들고 여기에 변수를 삽입해 서로 다른 페이지로 보여주는 기술)
-        //src/main/resoures/templates
-        
+
+        //3.뷰 페이지 설정하기
         return "articles/index";
     }
 
