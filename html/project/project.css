@@ -1,0 +1,173 @@
+.container {
+    width: 980px;
+    margin: 0 auto;
+    height: 658px;
+}
+
+header {
+    width: 100%;
+    max-width: 980px;
+    height: 60px;
+    box-sizing: border-box;
+    background-color: black; 
+    color: white; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 0 auto;
+}
+
+.header-left {
+    flex: 1; 
+}
+
+.header-right {
+    flex: 1; /* Take up remaining space on the right */
+    text-align: right; /* Align text to the right */
+}
+
+.s2 {
+    float: right;
+}
+
+.plus {
+    float: right;
+    margin-top: -30px;
+}
+
+aside > div {
+    background-color: lightgray;
+    border-radius: 25px;
+}
+aside {
+    
+    width: 176px;
+    height: 400px;
+    color: black;
+    
+    padding: 10px; /* Added padding */
+    float: left; /* Ensure aside is on the left side */
+}
+
+main {
+    width: 980px;
+    height: 658px;
+    margin: 0 auto; /* Center align main */
+    position: relative;
+    /* top: 60px; */
+    display: flex;
+
+}
+
+main > section {
+    width: 804px;
+    height: 658px;
+    
+}
+
+article .h1 {
+    flex: 1;
+}
+
+h4 {
+    margin-bottom: 5px;
+}
+
+.h1 {
+    border-top: 1px solid black;
+    width: 784px;
+    height: 193px;
+    margin-bottom: 10px; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr.td {
+    height: 50px; /* 원하는 높이로 조정11111 */
+}
+
+
+th {
+    border-bottom: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    /* padding: 8px; */
+    border-bottom: 1px dotted black;
+}
+
+/* 상품현황 테이블 점선 없애기 */
+article.h1 table.product-status td {
+    border-bottom: none;
+}
+
+li {
+    list-style-type: none;
+}
+aside {
+    float: left;
+    font-weight: bold;
+    padding: 10px;
+   /*  margin-right: -20px; */
+    /* width: 150px; */
+    height: 240px;
+    /* border: 1px solid;
+    overflow: hidden; */
+}
+
+/* Styling for 주요기능 */
+aside > div  {
+    background-color: #dcdcdc; 
+    border-radius: 30px;
+    padding: 10px; 
+    text-align: center; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    width: 150px;
+    height: 30px;
+
+}
+
+.aside {
+    float: left;
+    margin-left: -10px;
+}
+
+footer {
+    /* border-top: 1px solid black; */
+    width: 980px;
+    height: 41px;
+    /* margin-bottom: 70px;  */
+    box-sizing: border-box;
+    bottom: -300px;
+    /*  left: 470px; */
+    background-color: black;
+    color: white;
+    /* justify-content: space-between;  */
+    align-items: center; 
+    margin: 0 auto;
+    display: flex;
+    /* bottom: 0; */
+    position: absolute;
+}
+
+footer> article:nth-child(1) {
+    width: 100%;
+    height: 14px;
+    margin-top: -5px;
+    
+}
+footer> article:nth-child(2) {
+    width: 100%;
+    height: 14px;
+    float: right;
+    margin-top: -13px;
+    text-align: right;
+
+}
