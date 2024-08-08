@@ -1,0 +1,23 @@
+{{>layouts/header}}
+<!--목록 페이지에서 상세 페이지로 오는 화면-->
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">title</th>
+        <th scope="col">content</th>
+
+    </tr>
+    </thead>
+    {{#article}}
+    <tr>
+        <th>{{id}}</th>
+        <td>{{title}}</td>
+        <td>{{content}}</td>
+    </tr>
+    {{/article}}
+</table>
+<a href="/articles/{{article.id}}/edit" class="btn btn-primary">Edit</a>;  <!--수정 페이지 화면-->
+
+<a href="/articles">Go to Article</a>  <!--전체 목록 화면으로 갈 수 있게 뷰 작성-->
+{{>layouts/footer}}

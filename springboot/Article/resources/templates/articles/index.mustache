@@ -1,0 +1,22 @@
+{{>layouts/header}}
+<!--전체 목록 화면-->
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">title</th>
+        <th scope="col">content</th>
+
+    </tr>
+    </thead>
+    {{#articleList}}
+        <tr>
+            <th>{{id}}</th>
+            <td>{{title}}</td>
+            <td>{{content}}</td>
+        </tr>
+    {{/articleList}}
+</table>
+<!--목록 페이지에서 상세 페이지로 이동-->
+<a href="/articles/{{id}}">{{title}}</a>
+{{>layouts/footer}}
